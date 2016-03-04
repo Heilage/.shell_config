@@ -5,15 +5,15 @@ has_pkg_manager() {
 }
 
 install_deb() {	
-	do cat "source /usr/local/bin/virtualenvwrapper.sh" >> $HOME/.zshrc; done
+	echo "source /usr/local/bin/virtualenvwrapper.sh" >> $HOME/.zshrc
 }
 
 install_rpm() {
-	do cat "source /usr/bin/virtualenvwrapper.sh" >> $HOME/.zshrc; done 
+	echo "source /usr/bin/virtualenvwrapper.sh" >> $HOME/.zshrc 
 }
 
 install_osx(){
-	do  cat "source /usr/local/bin/virtualenvwrapper.sh" >> $HOME/.zshrc ; done 
+	echo "source /usr/local/bin/virtualenvwrapper.sh" >> $HOME/.zshrc 
 }
 
 #create basic zsh file, but will not overwrite old file
