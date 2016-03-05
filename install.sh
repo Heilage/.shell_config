@@ -2,7 +2,7 @@
 touch $HOME/.zshrc
 
 #Collect submodules
-git sbumodule update --init
+git submodule update --init
 
 #Set up symlinks
 echo "source $HOME/.shell_config/.zshrc-local" >> $HOME/.zshrc
