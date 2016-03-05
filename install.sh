@@ -1,3 +1,30 @@
+
+### FUNCTIONS
+## Distro specific variables
+has_pkg_manager() {
+    [ -x "$(which $1)" ]
+}
+
+dist_deb() {
+    cat "source /usr/local/bin/virtualenvwrapper.sh" >> $HOME/.shell_config/.zshrc-local
+}
+
+dist_fedora() {
+    cat "source /usr/bin/virtualenvwrapper.sh"  >> $HOME/.shell_config/.zshrc-local
+}
+
+dist_osx() {
+    cat "source /usr/local/bin/virtualenwrapper.sh" >> $HOME/.shell_config/.zshrc-local
+}
+
+# Check distro based on available package manager
+echo "INSTALL: Setting up distro specific settings."
+if has_pkg_manager apt-get ; then dist_deb
+elif has_pkg_manager dnf ; then dist_fedora
+elif has_pkg_manager brew ; then dist_osx
+fi
+echo "INSTALL: Done"
+
 #create basic zsh file, but will not overwrite old file if it already exists
 echo "INSTALL: Touching zshrc"
 touch $HOME/.zshrc
@@ -21,7 +48,7 @@ echo "INSTALL: ZSH Theme done"
 
 #Set up virtualenvs
 echo "INSTALL: Setting up virtual environment home folder"
-mkdir -p $HOME/.virtual_environments
+mkdir -p $HOME/.virtualenvs
 echo "INSTALL: Done"
 
 #Set up tmux and vim plugins
