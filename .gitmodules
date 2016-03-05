@@ -1,18 +1,15 @@
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = git@github.com:robbyrussell/oh-my-zsh.git
 [submodule "submodules/oh-my-zsh"]
 	path = submodules/oh-my-zsh
-	url = git@github.com:robbyrussell/oh-my-zsh.git
+	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "submodules/avit-virtualenv-zsh-theme"]
 	path = submodules/avit-virtualenv-zsh-theme
 	url = https://github.com/7c00/avit-virtualenv-zsh-theme
 [submodule "submodules/dircolors-solarized"]
 	path = submodules/dircolors-solarized
-	url = git@github.com:seebi/dircolors-solarized.git
+	url = https://github.com/seebi/dircolors-solarized.git
 [submodule "submodules/tpm"]
 	path = submodules/tpm
-	url = git@github.com:tmux-plugins/tpm.git
+	url = https://github.com/tmux-plugins/tpm.git
 [submodule "submodules/Vundle.vim"]
 	path = submodules/Vundle.vim
-	url = git@github.com:VundleVim/Vundle.vim.git
+	url = https://github.com/VundleVim/Vundle.vim.git
