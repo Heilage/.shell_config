@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=~/.shell_config/submodules/oh-my-zsh
+export ZSH=~/.shell_config/submodules/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -54,7 +54,7 @@ plugins=(git)
 
 # User configuration
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -81,8 +81,31 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=~/.virtual_environments
 eval "$(dircolors ~/.shell_config/submodules/dircolors-solarized/dircolors.256dark)"
-export DEFAULT_USER=eirik
+
+## Distro specific variables
+has_pkg_manager() {
+	[ -x "$(which $1)" ]
+}
+
+dist_deb() {
+	source /usr/local/bin/virtualenvwrapper.sh
+}
+
+dist_fedora() {
+	source /usr/bin/virtualenvwrapper.sh
+}
+
+dist_osx() {
+	source /usr/local/bin/virtualenwrapper.sh
+}
+
+if has_pkg_manager apt-get ; then dist_deb
+elif has_pkg_manager dnf ; then dist_fedora
+elif has_pkg_manager brew ; then dist_osx
+
+
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
