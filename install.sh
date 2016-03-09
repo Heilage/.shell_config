@@ -57,7 +57,7 @@ echo "INSTALL: Done"
 echo "INSTALL: Install TMUX plugins"
 ./submodules/tpm/bindings/install_plugins
 echo "INSTALL: Install VIM plugins"
-vim -E -c PluginInstall -c q!
+vim -c PluginInstall -c q!
 echo "INSTALL: Done"
 
 
