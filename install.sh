@@ -6,15 +6,17 @@ has_pkg_manager() {
 }
 
 dist_deb() {
-    cat "source /usr/local/bin/virtualenvwrapper.sh" >> $HOME/.shell_config/.zshrc-local
+    cat "source /usr/local/bin/virtualenvwrapper.sh" >> $HOME/.zshrc
+    cat "eval '$(dircolors ~/.shell_config/submodules/dircolors-solarized/dircolors.256dark)'" >> $HOME/.zshrc
 }
 
 dist_fedora() {
-    cat "source /usr/bin/virtualenvwrapper.sh"  >> $HOME/.shell_config/.zshrc-local
+    cat "source /usr/bin/virtualenvwrapper.sh"  >> $HOME/.zshrc
+    cat "eval '$(dircolors ~/.shell_config/submodules/dircolors-solarized/dircolors.256dark)'" >> $HOME/.zshrc
 }
 
 dist_osx() {
-    cat "source /usr/local/bin/virtualenwrapper.sh" >> $HOME/.shell_config/.zshrc-local
+    cat "source /usr/local/bin/virtualenwrapper.sh" >> $HOME/.zshrc
 }
 
 # Check distro based on available package manager

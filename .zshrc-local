@@ -64,5 +64,3 @@ source $ZSH/oh-my-zsh.sh
 #Virtualenv base folder
 export WORKON_HOME=~/.virtualenvs
 
-#Dircolors for zsh
-eval "$(dircolors ~/.shell_config/submodules/dircolors-solarized/dircolors.256dark)"
