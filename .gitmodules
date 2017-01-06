@@ -1,15 +1,20 @@
 [submodule "submodules/oh-my-zsh"]
 	path = submodules/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+	branch = master
 [submodule "submodules/avit-virtualenv-zsh-theme"]
 	path = submodules/avit-virtualenv-zsh-theme
 	url = https://github.com/7c00/avit-virtualenv-zsh-theme
+	branch = master
 [submodule "submodules/dircolors-solarized"]
 	path = submodules/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git
+	branch = master
 [submodule "submodules/tpm"]
 	path = submodules/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+	branch = master
 [submodule "submodules/Vundle.vim"]
 	path = submodules/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
+	branch = master
